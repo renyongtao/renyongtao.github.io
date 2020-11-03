@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+		<title>在线预约</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/element-ui@2.13.2/lib/theme-chalk/index.css">
+		<link rel="stylesheet" href="css/main.css?v=1.3" />
+	</head>
+	<style type="text/css">
+		.row{
+			background: #FFFFFF;
+			width: 100%;
+			border-radius: 5px 5px;
+			padding:10px 0px;
+		}
+		.row:hover{
+			border: 1px solid #27AF67;
+		}
+		.img{
+			width: 100px; 
+			height: 100px;
+			border-radius: 50px 50px;
+		}
+	</style>
+	<body>
+		<el-container id="artificer">
+			<el-header style="height:40px;padding:10px 5px;margin-top:10px;font-weight: bold;">
+				请选择为您服务的技师：
+			</el-header>
+			<el-main style="padding: 5px 5px;">
+				<div class="row" v-for="item in items" style="margin-top:5px"  @click="onClick(item.id)">
+					<el-container>
+						<el-aside width="100px">
+							 <el-image class="img" :src="item.src"></el-image>
+						</el-aside>
+						<el-main style="padding: 0px 10px;" >
+							<el-row>
+								<el-col ><span style="font-size:20px;">{{item.name}}</span><span style="padding-left: 10px;color:#BABABA;">{{item.level}}</span></el-col>
+								<el-col style="font-size:14px;color:#BABABA;margin-top:5px" >{{item.pro}}</el-col>
+								<el-col style="margin-top:5px">
+									<el-button type="success" style="padding:0px" v-show="item.isOrder">可预约</el-button>
+									<el-button type="warning" style="padding:0px" v-show="item.isQuestion">可咨询</el-button>
+									<el-button type="danger"  style="padding:0px" v-show="item.isOut">可上门</el-button>
+								</el-col>
+							</el-row>
+						</el-main>
+					</el-container>
+				</el-row>
+			</el-main>
+			<el-footer style="height: 40px;">
+				<el-row>
+					<a href="index.htm"><el-col :span="11" >首页</el-col></a>
+					<a href="ordered.htm"><el-col :span="11">预约记录</el-col></a>
+				</el-row>
+			</el-footer>
+		</el-container>
+	
+	</body>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/element-ui@2.13.2/lib/index.js"></script>
+	<script>
+		new Vue({
+			el:"#artificer",
+			data:{
+				items:[]
+			},
+			created:function(){
+				this.items=this.getData()
+			},
+			methods:{
+				getData:function(){
+					return [
+						{id:1,name:"付梅艳",level:"高级技师",pro:"是范德萨发的说法是是范德萨发的说法是是范德萨发的说法是是范德萨发的说法是",isOrder:true,isQuestion:true,isOut:true,src:"https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3546958636,2959544017&fm=26&gp=0.jpg"},
+						{id:2,name:"付梅艳2",level:"高级技师",pro:"是范德萨发的说法是是范德萨发的说法是是范德萨发的说法是是范德萨发的说法是",isOrder:true,isQuestion:true,isOut:true,src:"https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3546958636,2959544017&fm=26&gp=0.jpg"},
+						{id:3,name:"付梅艳3",level:"高级技师",pro:"是范德萨发的说法是是范德萨发的说法是是范德萨发的说法是是范德萨发的说法是",isOrder:true,isQuestion:true,isOut:true,src:"https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3546958636,2959544017&fm=26&gp=0.jpg"}
+					]
+				},
+				onClick:function(id){
+					location.href="time.htm?id="+id;
+				}
+			}
+		})
+	</script>
+</html>
