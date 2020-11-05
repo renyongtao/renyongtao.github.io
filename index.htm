@@ -11,7 +11,7 @@
 		<el-container id="inlineOrder">
 			<el-header style="height:50px;">
 				<el-cascader  v-model="area.value" ref="areaLabel" style="width:60%"   @change="AreaChange" :options="area.options"  placeholder="按地区选择需要预约的门店" clearable></el-cascader>
-				<el-button type="success" icon="el-icon-location" style="width:37%"  v-on:click="CurrentSite">当前位置-测试</el-button>
+				<el-button type="success" icon="el-icon-location" style="width:37%"  v-on:click="CurrentSite">当前位置</el-button>
 			</el-header>
 			<el-main>
 				<el-row style="font-weight: bold;color: black;padding: 5px 10px;">{{title}}</el-row>
