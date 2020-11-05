@@ -1,0 +1,19 @@
+before_script:
+	- echo "Befor script section"
+build1:
+	stage:build
+	script:
+		- echo "Do your build here"
+test1 
+	stage:test1
+	script:
+		-echo "do atest hree"
+	allow_failure:true
+test2:
+	stage:test
+	script:
+		- echo "Do another parallel test here"
+deploy1:
+	stage:deploy
+	script:
+		-echo "Do your deploy hree"
