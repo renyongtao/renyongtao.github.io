@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+		<title>在线预约</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/element-ui@2.13.2/lib/theme-chalk/index.css">
+		<link rel="stylesheet" href="css/index.css?v=1.2" />
+	</head>
+	<body>
+		<el-container id="inlineOrder">
+			<el-header style="height:50px;">
+				<el-cascader  v-model="area.value" ref="areaLabel" style="width:60%"   @change="AreaChange" :options="area.options"  placeholder="按地区选择需要预约的门店" clearable></el-cascader>
+				<el-button type="success" icon="el-icon-location" style="width:37%"  v-on:click="CurrentSite">当前位置</el-button>
+			</el-header>
+			<el-main>
+				<el-row style="font-weight: bold;color: black;padding: 5px 10px;">{{title}}</el-row>
+				<el-row v-show="ihShowList" class="item" v-for="item in items">
+					<el-col style="font-weight: bold;color: black;">{{item.shopName}}</el-col>
+					<el-col>地址：{{item.address}}</el-col>
+					<el-col>电话：{{item.phone}}<el-button type="success" class="yy" icon="el-icon-timer" @click="onClick(item.id)">我要预约</el-button></el-col>
+				</el-row>
+				<el-row v-show="isShow" style="padding:10px 10px">未找到任何门店</el-row>
+			</el-main>
+			<el-footer style="height: 40px;">
+				<el-row>
+					<a href="index.htm"><el-col :span="11" >首页</el-col></a>
+					<a href="ordered.htm"><el-col :span="11">预约记录</el-col></a>
+				</el-row>
+			</el-footer>
+		</el-container>
+	</body>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/element-ui@2.13.2/lib/index.js"></script>
+	<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=976c976b2ab56a80e2bf1aed7e888144"></script>
+	<script src="js/lib.js"></script>
+	<script src="js/index.js"></script>
+	
+</html>

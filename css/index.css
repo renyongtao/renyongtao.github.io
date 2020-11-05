@@ -1,0 +1,27 @@
+@import url("main.css?v=1.3");
+.el-header{
+	text-align: left;
+	font-size: 14px;
+	font-weight: bold;W
+	padding: 5px 5px;
+	clear: both;
+	width: 100%;
+}
+.el-cascader-menu{
+	min-width:120px;
+	max-width: 120px;
+}
+.el-main{
+	padding: 0px;
+}
+.el-col{
+	margin: 2px 5px;
+}
+.item .el-col{
+	color: #9C9C9C;
+}
+.yy{
+	float:right;
+	padding: 8px 20px;
+	margin-right: 10px;
+}
