@@ -1,11 +1,7 @@
-default:
-  before_script:
-    - echo "global before script"
-
 job:
-  before_script:
-    - echo " execute this instead of global before script"
   script:
-    - echo " my command"
-  after_script:
-    - echo " execute this after my script"
+
+      echo "First command line
+      is split over two lines."
+
+      echo "Second command line."
