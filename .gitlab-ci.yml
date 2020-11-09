@@ -6,5 +6,6 @@ delpoy:
     - master
   script:
     - cd /wwwroot/yyt
+    - git remote -v
     - git pull
     - echo "first deploy"
