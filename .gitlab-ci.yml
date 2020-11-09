@@ -1,9 +1,9 @@
 stages:
-	- debloy
-deploy:
-	stage:deploy
-	only:
-		- master
-	script:
-		- echo "first deploy"
-		- cp /* /wwwroot/yyt/
+  - deploy
+delpoy:
+  stage: deploy
+  only:
+    - master
+  script:
+    - echo "first deploy"
+    - cp /* /wwwroot/yyt/
