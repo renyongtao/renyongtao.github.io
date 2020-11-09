@@ -7,5 +7,6 @@ delpoy:
   script:
     - cd /wwwroot/yyt
     - git remote -v
+    - ssh -T git@192.168.108.210
     - git pull
     - echo "first deploy"
