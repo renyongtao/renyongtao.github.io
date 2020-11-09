@@ -5,6 +5,6 @@ delpoy:
   only:
     - master
   script:
-	- cd /wwwroot/yyt
-	- git pull -u "https://192.168.108.210/renyongtao/yyt.git"
+    - cd /wwwroot/yyt
+    - git pull -u "https://192.168.108.210/renyongtao/yyt.git"
     - echo "first deploy"
