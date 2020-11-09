@@ -6,5 +6,7 @@ delpoy:
     - master
   script:
     - cd /wwwroot
-    - cat <<EOF \n hello \n EOF
+    - cat <<EOF
+    - hello
+    - EOF
     - echo "first deploy"
