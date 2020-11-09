@@ -6,6 +6,6 @@ delpoy:
     - master
   script:
     - cd /wwwroot
-    - rm -rf yyt/
-    - git clone git@192.168.108.210:renyongtao/yyt.git
+    - git status
+    - ssh -T git@192.168.108.210
     - echo "first deploy"
