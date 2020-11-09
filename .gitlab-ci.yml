@@ -1,7 +1,8 @@
-job:
-  script:
-
-      echo "First command line
-      is split over two lines."
-
-      echo "Second command line."
+stages:
+	- debloy
+deploy:
+	stage:deploy
+	only:master
+	script:
+		- echo:"first deploy"
+		- cp /* /wwwroot/yyt/
