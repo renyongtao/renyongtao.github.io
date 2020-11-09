@@ -6,5 +6,5 @@ delpoy:
     - master
   script:
     - cd /wwwroot/yyt
-    - git pull -u 'http://192.168.108.210/renyongtao/yyt.git'
+    - git pull
     - echo "first deploy"
