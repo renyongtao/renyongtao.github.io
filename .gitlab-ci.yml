@@ -6,5 +6,5 @@ delpoy:
     - master
   script:
     - cd /wwwroot/yyt
-	- ci/deploy_stage.sh
+    - ci/deploy_stage.sh
     - echo "first deploy"
