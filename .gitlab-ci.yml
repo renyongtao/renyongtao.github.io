@@ -7,6 +7,5 @@ delpoy:
   script:
     - cd /wwwroot/yyt
     - git remote -v
-    - git status
     - git pull
     - echo "first deploy"
