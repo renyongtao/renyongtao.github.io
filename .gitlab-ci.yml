@@ -6,6 +6,5 @@ delpoy:
     - master
   script:
     - cd /wwwroot
-    - git status
     - ssh -T git@192.168.108.210
     - echo "first deploy"
