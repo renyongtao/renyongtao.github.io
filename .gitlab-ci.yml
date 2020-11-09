@@ -6,7 +6,7 @@ delpoy:
     - master
   script:
     - cd /wwwroot
-    - cat <<EOF
-    - hello
+    - ssh -T git@192.168.108.210 <<EOF
+    - yes
     - EOF
     - echo "first deploy"
