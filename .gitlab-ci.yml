@@ -4,6 +4,7 @@ delpoy:
   stage: deploy
   only:
     - master
+  when:manual
   script:
     - cd /wwwroot/yyt
     - git pull
