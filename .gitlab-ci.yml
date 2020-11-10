@@ -5,8 +5,6 @@ delpoy:
   only:
     - master
   script:
-    - cd /wwwroot
-    - ssh -T git@192.168.108.210 <<EOF
-    - \yes
-    - EOF
+    - cd /wwwroot/yyt
+    - git pull
     - echo "first deploy"
