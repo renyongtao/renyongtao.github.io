@@ -7,4 +7,3 @@ delpoy:
   script:
     - cd /wwwroot/yyt
     - git pull
-    - echo "first deploy"
