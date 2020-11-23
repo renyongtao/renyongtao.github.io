@@ -31,7 +31,7 @@ new Vue({
 		CurrentSite:function(){
 			var _this=this;
 			this.area.value=[];
-			Lib.GetCurrentSite(1000,function(data){
+			Lib.GetCurrentSite(10000,function(data){
 				console.info(data);
 				_this.position=data.position;
 				_this.title="您所在位置"+data.addressComponent.street+data.addressComponent.township+"附近的幼幼堂门店";
