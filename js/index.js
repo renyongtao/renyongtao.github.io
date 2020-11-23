@@ -5,6 +5,7 @@ new Vue({
 		isShow:false,
 		ihShowList:true,
 		isShowPager:true,
+		failReason:"",
 		position:{},
 		items:[],
 		area:{
@@ -31,11 +32,13 @@ new Vue({
 			var _this=this;
 			this.area.value=[];
 			Lib.GetCurrentSite(1000,function(data){
+				console.info(data);
 				_this.position=data.position;
 				_this.title="您所在位置"+data.addressComponent.street+data.addressComponent.township+"附近的幼幼堂门店";
 				_this.getShop();
 			},function(data){
 				_this.title="定位失败,请按地区选择";
+				_this.failReason=data;
 				_this.getShop();
 			})
 		}
